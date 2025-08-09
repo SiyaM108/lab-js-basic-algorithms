@@ -47,3 +47,27 @@ console.log(`Word count: ${wordCount}`);
 //Count the word et
 let etCount = myParagraph.split("et").length - 1;
 console.log(`The word "et" appears ${etCount} times.`);
+
+// Bonus 2: Palindrome
+let phraseToCheck = "A man, a plan, a canal, Panama!";
+let testPhrase = "";
+for (let i = 0; i < phraseToCheck.length; i++) {
+    if (phraseToCheck[i] === " " || phraseToCheck[i] === "," || phraseToCheck[i] === "!" || phraseToCheck[i] === ".") {
+        ; // do nothing, skip these characters
+    }
+    else {
+       testPhrase += phraseToCheck[i].toLowerCase();
+    }
+}
+
+//console.log(testPhrase);
+//console.log(testPhrase.length);
+for (let i = 0; i < testPhrase.length / 2; i++) {
+    if (testPhrase[i] !== testPhrase[testPhrase.length - 1 - i]) {
+        console.log(`The phrase "${phraseToCheck}" is not a palindrome.`);
+        break;
+    }
+    if (i === Math.floor(testPhrase.length / 2) - 1) {
+        console.log(`The phrase "${phraseToCheck}" is a palindrome!`);
+    }
+}
