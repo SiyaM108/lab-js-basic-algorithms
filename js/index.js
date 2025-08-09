@@ -62,12 +62,17 @@ for (let i = 0; i < phraseToCheck.length; i++) {
 
 //console.log(testPhrase);
 //console.log(testPhrase.length);
+let isPalindrome = true;
+
 for (let i = 0; i < testPhrase.length / 2; i++) {
     if (testPhrase[i] !== testPhrase[testPhrase.length - 1 - i]) {
-        console.log(`The phrase "${phraseToCheck}" is not a palindrome.`);
+        isPalindrome = false;
         break;
     }
-    if (i === Math.floor(testPhrase.length / 2) - 1) {
-        console.log(`The phrase "${phraseToCheck}" is a palindrome!`);
-    }
+}
+
+if (isPalindrome) {
+    console.log(`The phrase "${phraseToCheck}" is a palindrome!`);
+} else {
+    console.log(`The phrase "${phraseToCheck}" is not a palindrome.`);
 }
