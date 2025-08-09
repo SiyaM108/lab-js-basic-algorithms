@@ -17,3 +17,14 @@ if(hacker1.length > hacker2.length) {
 }
 
 // Iteration 3: Loops
+let upperCaseName = "";
+for (let i = 0; i < hacker1.length; i++) {
+  upperCaseName += hacker1[i].toUpperCase() + " ";
+}
+console.log(upperCaseName);
+
+let reversedName = "";
+for (let i = hacker2.length - 1; i >= 0; i--) {
+  reversedName += hacker2[i];
+}
+console.log(reversedName);
