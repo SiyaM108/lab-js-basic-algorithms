@@ -28,3 +28,14 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
   reversedName += hacker2[i];
 }
 console.log(reversedName);
+
+// Lexicographic Order
+if (hacker1.localeCompare(hacker2) < 0) {
+  console.log(`The driver's name goes first.`);
+}
+else if (hacker1.localeCompare(hacker2) > 0) {
+  console.log(`Yo, the navigator goes first definitely.`);
+}
+else {
+  console.log(`What?! You both have the same name?`);
+}
